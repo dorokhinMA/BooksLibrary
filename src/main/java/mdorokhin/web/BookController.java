@@ -84,14 +84,10 @@ public class BookController {
 
     }
 
-//    @ModelAttribute("newBook")
-//    public Book getNewBook(){
-//        return new Book();
-//    }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String addBook(@Valid @ModelAttribute ("newBook") Book book,
-//                          @RequestParam("authorId") Integer authorId,
+                         // @RequestParam("authorId") Integer authorId,
                           Model model,
                           BindingResult bindingResult,
                           @RequestParam(value = "image", required = false) MultipartFile file) {

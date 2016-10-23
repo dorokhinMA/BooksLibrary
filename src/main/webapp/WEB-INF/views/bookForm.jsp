@@ -60,12 +60,14 @@
 
 <form:form modelAttribute="newBook" method="POST" action="${pageContext.request.contextPath}/books/add"
            enctype="multipart/form-data">
-    <%--<form:hidden path="id" />--%>
+
+    <<form:hidden path="id" />
 
     <table>
+
         <tr>
             <td>Title:</td>
-            <td><form:input path="title"/></td>
+            <td><form:textarea cols="60" rows="8" path="title"/></td>
             <td><form:errors path="title"/></td>
 
         </tr>
@@ -78,7 +80,7 @@
 
         <tr>
             <td>Text:</td>
-            <td><form:input path="text"/></td>
+            <td><form:textarea cols="60" rows="8" path="text"/></td>
             <td><form:errors path="text"/></td>
 
         </tr>
@@ -101,33 +103,6 @@
 
 </form:form>
 
-
-<%--<form:form action="${pageContext.request.contextPath}/books/add" method="post" enctype="multipart/form-data" modelAttribute="newBook">--%>
-
-<%--<c:if test="${updatingBook ne null}">--%>
-<%--<c:set var="id" value="${updatingBook.id}"/>--%>
-<%--</c:if>--%>
-
-<%--<form:hidden path="id" />--%>
-
-<%--<form:label path="title">Название:</form:label>--%>
-<%--<form:textarea path="title" cols="45" rows="8" />--%>
-
-
-<%--<label for="image">Обложка:</label>--%>
-<%--<input name="image" type="file"/>--%>
-
-<%--<form:label path="text">Текст книги:</form:label>--%>
-<%--<form:textarea path="text" cols="45" rows="8" />--%>
-
-<%--<form:select path="author">--%>
-<%--<form:options items="${authorList}" itemValue="authorId" itemLabel="author" />--%>
-<%--</form:select>--%>
-
-<%--<button type="submit"><span>Save</span></button>--%>
-
-
-<%--</form:form>--%>
 
 </body>
 </html>

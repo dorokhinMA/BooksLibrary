@@ -47,7 +47,7 @@
     </bean>
 
 
-    <!--<beans profile="mysql">-->
+    <beans profile="mysql">
     <context:property-placeholder location="classpath:database/mysql/mysql.properties" system-properties-mode="OVERRIDE"/>
 
     <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
@@ -55,7 +55,7 @@
           p:url="${host}"
           p:username="${user}"
           p:password="${password}"/>
-    <!--</beans>-->
+    </beans>
 
     <beans profile="tomcat">
         <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/library"/>
